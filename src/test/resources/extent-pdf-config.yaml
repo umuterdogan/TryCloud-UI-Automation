@@ -1,0 +1,13 @@
+documentTitle: "QA Automation Report"
+reportName: "TryCloud UI Automation"
+encoding: "utf-8"
+theme: STANDARD
+
+themeColor: "#1E90FF"   #blue
+textColor: "#000000"
+author: "Umut Erdoğan"
+
+systemInfo:
+  Browser: "Chrome"
+  OS: "macOS"
+  Environment: "QA"

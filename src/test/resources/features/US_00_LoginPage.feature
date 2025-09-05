@@ -1,6 +1,6 @@
-@wip
 Feature: As a user, I should be able to log in.
 
+  @smoke
   Scenario Outline: User can login with valid credentials (either clicking on the "Login button" or hitting the
   "Enter" key from the keyboard as the last step)
     Given the user on the login page
@@ -13,7 +13,7 @@ Feature: As a user, I should be able to log in.
   | enterKey     |
 
 
-
+  @smoke
   Scenario Outline: User cannot login with any invalid credentials "Wrong username or password." should be displayed
   for invalid credentials
     Given the user on the login page
@@ -49,7 +49,7 @@ Feature: As a user, I should be able to log in.
      # |            |            | enterKey     |
 
 
-  @wipo
+
   Scenario: User can see the password in a form of dots by default
     Given the user on the login page
     And the user enters the password

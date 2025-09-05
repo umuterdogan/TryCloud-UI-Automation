@@ -18,7 +18,6 @@ Feature: Contacts Module
 
     # we create then delete the user to keep our database clean
 
-
   Scenario: User can see all the contacts as a list inside the middle column and total number
     When the user clicks on All contacts button
     Then the user should see total number of contacts

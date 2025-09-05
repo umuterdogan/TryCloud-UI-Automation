@@ -1,4 +1,3 @@
-@haden
 Feature: Deck Module Functionality
 
 #  The scenarios inside this Feature file, shouldn't be run seperately (except the first one)

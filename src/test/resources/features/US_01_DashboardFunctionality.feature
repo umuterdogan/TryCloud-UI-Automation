@@ -5,7 +5,7 @@
 #2 - User can click on Customize button and select any of the Widgets.
 #3 - User can click on Set Status button and select any of the Status options.
 
-@wip
+
 Feature: Dashboard Functions
 
   Background:

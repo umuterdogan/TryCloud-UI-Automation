@@ -5,6 +5,7 @@ Feature: Log out Function
     And the user clicks the avatar icon
     And the user clicks the logout label
 
+  @smoke
   Scenario: User can log out and ends up in login page
    Then the user should see the url contains "/index.php/login"
 

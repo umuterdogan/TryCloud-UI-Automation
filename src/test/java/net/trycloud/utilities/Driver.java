@@ -17,19 +17,13 @@ public class Driver {
 
     private static InheritableThreadLocal<WebDriver> driverPool = new InheritableThreadLocal<>();
 
-    public static WebDriver get() {
 
-        if (driverPool.get() == null) {
+    public static WebDriver get(){
+
+        if(driverPool.get() == null){
+
 
             String browserType = System.getProperty("browser", ConfigurationReader.getProperty("browser"));
-
-            // Force Chrome on Jenkins agents no matter what env vars say
-            if (System.getenv("JENKINS_HOME") != null) {
-                browserType = "headless-chrome";
-            }
-
-            // Quick visibility in Jenkins console
-            System.out.println("BROWSER=" + browserType);
 
             switch (browserType) {
                 case "chrome":
@@ -48,42 +42,28 @@ public class Driver {
                     driverPool.set(new SafariDriver());
                     break;
 
-                case "headless-chrome": {
-                    ChromeOptions options = new ChromeOptions();
-                    options.addArguments(
-                            "--headless=new",
-                            "--window-size=1920,1080",
-                            "--disable-gpu",
-                            "--no-sandbox",
-                            "--disable-dev-shm-usage",
-                            "--ignore-certificate-errors"
-                    );
-                    options.setAcceptInsecureCerts(true);
-                    driverPool.set(new ChromeDriver(options));
+                case "headless-chrome":
+                    ChromeOptions chOpts = new ChromeOptions();
+                    chOpts.addArguments("--headless=new"); //
+                    driverPool.set(new ChromeDriver(chOpts));
                     break;
-                }
 
-                case "headless-firefox": {
-                    FirefoxOptions options = new FirefoxOptions();
-                    options.addArguments("-headless");
-                    options.addArguments("--width=1920", "--height=1080");
-                    options.setAcceptInsecureCerts(true);
-                    driverPool.set(new FirefoxDriver(options));
+                case "headless-firefox":
+                    FirefoxOptions ffOpts = new FirefoxOptions();
+                    ffOpts.addArguments("-headless");
+                    driverPool.set(new FirefoxDriver(ffOpts));
                     break;
-                }
 
                 default:
                     driverPool.set(new ChromeDriver());
             }
-
-            // Don’t call maximize in headless; it’s ignored and can fail on some drivers
-            if (!browserType.contains("headless")) {
-                driverPool.get().manage().window().maximize();
-            }
+            driverPool.get().manage().window().maximize();
             driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
         }
 
         return driverPool.get();
+
     }
 
 

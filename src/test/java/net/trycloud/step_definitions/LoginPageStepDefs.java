@@ -47,6 +47,8 @@ public class LoginPageStepDefs {
 
     @Then("the user should see the url contains {string}")
     public void the_user_should_see_the_url(String expectedURL) {
+
+        System.out.println(Driver.get().getCurrentUrl());
         Assert.assertTrue(Driver.get().getCurrentUrl().contains(expectedURL));
 
     }

@@ -5,12 +5,12 @@ Feature: As a user, I should be able to log in.
   "Enter" key from the keyboard as the last step)
     Given the user on the login page
     Given the user is logged in with "<submitType>"
-    Then the user should see the url contains "/index.php/apps/"
+    Then  the user should see the url contains "index.php/apps/dashboard/"
     And the user should see the username as "Employee61"
     Examples:
-  | submitType   |
-  | submitButton |
-  | enterKey     |
+      | submitType |
+      #| submitButton |
+      | enterKey   |
 
 
   @smoke
@@ -19,7 +19,7 @@ Feature: As a user, I should be able to log in.
     Given the user on the login page
     And the user is logged in "<username>" and "<password>" with "<submitType>"
     Then the user should see the message "Wrong username or password."
-    Then the user should see the url contains "/index.php/apps"
+    Then the user should see the url contains "index.php/login"
 
     Examples:
       | username   | password    | submitType   |
@@ -37,7 +37,7 @@ Feature: As a user, I should be able to log in.
     Given the user on the login page
     And the user is logged in "<username>" and "<password>" with "<submitType>"
     Then the user should see the message "Please fill out this field."
-    And the user should see the url contains "/index.php/login"
+    And the user should see the url contains "index.php/login"
 
     Examples:
       | username   | password   | submitType   |

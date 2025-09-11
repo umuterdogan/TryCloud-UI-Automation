@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
         glue = "net/trycloud/step_definitions",
 
         dryRun = false,
-        tags = "@wipo"
+        tags = "@smoke"
 
      //   publish = true //generating a report with public link
 )

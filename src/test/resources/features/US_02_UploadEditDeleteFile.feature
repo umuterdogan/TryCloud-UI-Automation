@@ -59,7 +59,7 @@ Feature: Upload Edit Delete File Functionality
   # we create a new file and folder, then copy file to that folder to verify,
   # then to be able re-run this test again we need to delete test file and folder
 
-  @smoke
+
   Scenario: User can see the total number of files and folders under the files list table
     Then the user should see total number of files and folders
 

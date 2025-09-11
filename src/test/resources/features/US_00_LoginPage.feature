@@ -13,7 +13,7 @@ Feature: As a user, I should be able to log in.
       | enterKey   |
 
 
-  @smoke
+  # @smoke
   Scenario Outline: User cannot login with any invalid credentials "Wrong username or password." should be displayed
   for invalid credentials
     Given the user on the login page

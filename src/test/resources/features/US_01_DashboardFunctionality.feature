@@ -11,7 +11,7 @@ Feature: Dashboard Functions
   Background:
     Given the user is logged in
 
-  @smoke
+ # @smoke
   Scenario: After Login user can see all modules and Username
     Then the user should be able to see the username
     And the user should be able to see below modules

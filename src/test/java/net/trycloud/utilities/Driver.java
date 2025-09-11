@@ -44,9 +44,14 @@ public class Driver {
 
                 case "headless-chrome":
                     ChromeOptions chOpts = new ChromeOptions();
-                    chOpts.addArguments("--headless=new"); // güncel headless
+                    chOpts.addArguments("--headless=new");
+                    chOpts.addArguments("--window-size=1920,1080");
+                    chOpts.addArguments("--disable-gpu");
+                    chOpts.addArguments("--no-sandbox");
+                    chOpts.addArguments("--disable-dev-shm-usage");
+                    chOpts.addArguments("--ignore-certificate-errors");
+                    chOpts.setAcceptInsecureCerts(true);
                     driverPool.set(new ChromeDriver(chOpts));
-                    break;
 
                 case "headless-firefox":
                     FirefoxOptions ffOpts = new FirefoxOptions();

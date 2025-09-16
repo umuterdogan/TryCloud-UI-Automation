@@ -25,7 +25,7 @@ public class NewGroupContactsPage extends BasePage{
      @FindBy(xpath = "(//div[@tabindex=-1])[11]")
      public List<WebElement> groupDropdownList;
 
-     @FindBy(xpath = "//div[contains(text(),'Mike')]")
+     @FindBy(xpath = "//div[contains(text(),'Kebi')]")
     public WebElement contact;
 
      @FindBy(xpath = "//input[@placeholder='Choose property type']")

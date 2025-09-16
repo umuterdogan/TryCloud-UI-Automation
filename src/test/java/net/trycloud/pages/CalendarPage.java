@@ -98,7 +98,7 @@ public class CalendarPage extends BasePage{
     }
 
     public WebElement verifyEvent(String meetingName){
-        return Driver.get().findElement(By.xpath("//div[@class='fc-event-title'][.='"+meetingName+"']"));
+        return Driver.get().findElement(By.xpath("//div[@class='fc-event-title fc-sticky'][.='"+meetingName+"']"));
     }
     public String getMonth(int month){
         String result = "";

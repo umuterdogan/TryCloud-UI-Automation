@@ -1,4 +1,6 @@
 Feature: List of Task
+
+Background: Preconditions
 Given the user on the login page
 And the user is logged in
 When user can click task icon

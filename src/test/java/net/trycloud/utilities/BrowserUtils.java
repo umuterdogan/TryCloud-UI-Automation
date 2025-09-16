@@ -15,11 +15,6 @@ import java.util.Set;
 public class BrowserUtils {
 
 
-    /*
-    This method will accept int (in seconds)
-    and execute Thread.sleep method for given duration
-    Arg: int second
-     */
     public static void sleep(int second){
         second *= 1000;
         try{
@@ -55,9 +50,8 @@ public class BrowserUtils {
         Assert.assertTrue(Driver.get().getTitle().contains(expectedInTitle));
     }
 
-    /*
-    This method accepts WebElement target,
-    and waits for that WebElement not to be displayed on the page
+    /**
+     * Waits until the given WebElement is no longer visible on the page.
      */
     public static void waitForInvisibilityOf(WebElement target){
 
@@ -66,9 +60,8 @@ public class BrowserUtils {
         wait.until(ExpectedConditions.invisibilityOf(target));
     }
 
-    /*
-    This method accepts String title,
-    and waits for that Title to contain given String value.
+    /**
+     * Waits until the page title contains the specified text.
      */
     public static void waitForTitleContains(String title){
 

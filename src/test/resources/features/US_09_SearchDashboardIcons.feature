@@ -1,15 +1,15 @@
 Feature: Search Functionalities Dashboard Icons
 
   Background:
-      Given the user is logged in
+    Given the user is logged in
 
-    Scenario:User can search file typing its name through the magnifying glass icon and
-             see the details side page of the file when clicked on it.
+  Scenario:User can search file typing its name through the magnifying glass icon and
+  see the details side page of the file when clicked on it.
 
-      When User can click the magnifying glass icon
-      And  User can write "testAvatar" into the text box
-      And  User can click on the file name
-      Then User can see the details side page of the "testAvatar"
+    When User can click the magnifying glass icon
+    And  User can write "testAvatar" into the text box
+    And  User can click on the file name
+    Then User can see the details side page of the "testAvatar"
 
 
   Scenario:User can search contacts by clicking on the contacts icon and typing its name
@@ -20,7 +20,7 @@ Feature: Search Functionalities Dashboard Icons
 
 
   Scenario:User can see only the images files with the extension of .jpeg/.jpg under the Photos module
-           when uploaded them
+  when uploaded them
 
     When the user click "Photos" module
     And  User should be on the "/index.php/apps/photos/"

@@ -8,12 +8,12 @@ Feature: As a user, I should be able to log in.
     Then  the user should see the url contains "index.php/apps/dashboard/"
     And the user should see the username as "Employee61"
     Examples:
-      | submitType |
-      #| submitButton |
-      | enterKey   |
+      | submitType   |
+      | submitButton |
+      | enterKey     |
 
 
-  # @smoke
+  @smoke
   Scenario Outline: User cannot login with any invalid credentials "Wrong username or password." should be displayed
   for invalid credentials
     Given the user on the login page
@@ -24,11 +24,9 @@ Feature: As a user, I should be able to log in.
     Examples:
       | username   | password    | submitType   |
       | 1234       | Employee123 | submitButton |
-    #  | 1234       | 1234        | submitButton |
-     # | Employee61 | 1234        | submitButton |
+      | Employee61 | 1234        | submitButton |
       | 1234       | Employee123 | enterKey     |
-     # | 1234       | 1234        | enterKey     |
-     # | Employee61 | 1234        | enterKey     |
+      | 1234       | 1234        | enterKey     |
 
 
   @NegativeLogin
@@ -42,11 +40,11 @@ Feature: As a user, I should be able to log in.
     Examples:
       | username   | password   | submitType   |
       |            | Emploee123 | submitButton |
-     # | Employee61 |            | submitButton |
-     # |            |            | submitButton |
-     # |            | Emploee123 | enterKey     |
-     # | Employee61 |            | enterKey     |
-     # |            |            | enterKey     |
+      | Employee61 |            | submitButton |
+      |            |            | submitButton |
+      |            | Emploee123 | enterKey     |
+      | Employee61 |            | enterKey     |
+      |            |            | enterKey     |
 
 
 
@@ -76,5 +74,5 @@ Feature: As a user, I should be able to log in.
 
     Examples:
       | value             | textBoxType |
-     # | Password          | password    |
+      | Password          | password    |
       | Username or email | username    |

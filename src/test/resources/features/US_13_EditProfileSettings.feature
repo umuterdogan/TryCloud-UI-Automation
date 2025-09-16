@@ -18,9 +18,9 @@ Feature: Profile Settings Functionality
       | Profile picture |
 
 
-   Scenario: User can change "Full name" info under Profile Settings page
-     And the user enters the name "Abcd"
-     Then the user should be able to see the "Abcd"
+  Scenario: User can change "Full name" info under Profile Settings page
+    And the user enters the name "Abcd"
+    Then the user should be able to see the "Abcd"
 
   Scenario: User can make "Phone number" info as private under Profile Settings page
     And the user clicks the phone icon-triangle

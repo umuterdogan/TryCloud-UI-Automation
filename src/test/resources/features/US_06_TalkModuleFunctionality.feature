@@ -8,7 +8,7 @@ Feature: As a user, I should be able to create a new conversation, add participa
 
   Background:
     Given the user is logged in
-    And the user clicks on "Spreed" module
+    And the user clicks on "spreed" module
 
 
   Scenario: User can create a new conversation by adding any selected participant

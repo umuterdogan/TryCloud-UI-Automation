@@ -1,6 +1,6 @@
 Feature: Deck Module Functionality
 
-#  The scenarios inside this Feature file, shouldn't be run seperately (except the first one)
+#  The scenarios inside this Feature file, shouldn't be run separately (except the first one)
 #  Otherwise, it is inevitable to get failed results
 #  The scenarios are linked to the previous one
 

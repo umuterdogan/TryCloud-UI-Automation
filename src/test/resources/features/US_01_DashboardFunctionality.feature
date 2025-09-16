@@ -5,13 +5,13 @@
 #2 - User can click on Customize button and select any of the Widgets.
 #3 - User can click on Set Status button and select any of the Status options.
 
-
+@wip
 Feature: Dashboard Functions
 
   Background:
     Given the user is logged in
 
- # @smoke
+  @smoke
   Scenario: After Login user can see all modules and Username
     Then the user should be able to see the username
     And the user should be able to see below modules

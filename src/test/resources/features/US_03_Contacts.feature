@@ -1,3 +1,4 @@
+@wip
 Feature: Contacts Module
 
   Background:
@@ -38,8 +39,8 @@ Feature: Contacts Module
     Then the user should be able to delete the "<contact>"
 
     Examples:
-      | contact    |
-      | TestName   |
+      | contact |
+      | Dilo    |
 
     # This scenario can be either run together with creating a new contact, or delete a manually created contact
 

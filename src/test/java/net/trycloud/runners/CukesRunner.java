@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "net/trycloud/step_definitions",
         dryRun = false,
-        tags = "@parallel"
+        tags = ""
 
      //   publish = true //generating a report with public link
 )
